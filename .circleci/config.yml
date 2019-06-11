@@ -16,7 +16,9 @@ jobs:
 
       - run: cd openmrs/api && mvn dependency:go-offline
 
-      - run: cd openmrs/omod && mvn dependency:go-offline
+      # This step breaks because of omod's dependency on api
+      #
+      # - run: cd openmrs/omod && mvn dependency:go-offline
 
       - save_cache:
           paths:
