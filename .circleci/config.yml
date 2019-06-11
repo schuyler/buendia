@@ -32,8 +32,8 @@ jobs:
       # Collect and store test results
       - run: >
           mkdir -p /tmp/test-results &&
-          cp -a api/target/surefire-reports /tmp/test-results/api &&
-          cp -a omod/target/surefire-reports /tmp/test-results/omod
+          cp -a openmrs/api/target/surefire-reports /tmp/test-results/api &&
+          cp -a openmrs/omod/target/surefire-reports /tmp/test-results/omod
 
       - store_test_results:
           path: /tmp/test-results
